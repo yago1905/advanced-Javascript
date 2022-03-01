@@ -11,26 +11,24 @@
 калорийность гамбургера. Можно использовать примерную архитектуру класса из 
 методички, но можно использовать и свою.*/
 
-document.getElementById('order').addEventListener('click', event =>{
+document.getElementById('order').addEventListener('click', event => {
     console.log(event.target);
-    let hamburger = new Hamburger('size', 'filling', 'topping')
+    let hamburger = new Hamburger('size', 'filling', 'topping');
 })
 
 class Hamburger {
     constructor(size, filling, toppings) {
-        this.size =  this.getElement(size);
-        this.filling =  this.getElement(filling);
-        this.toppings =  this.getElements(toppings);
+        this.size = this.getElement(size);
+        this.filling = this.getElement(filling);
+        this.toppings = this.getElements(toppings);
         this._total();
         //console.log(Hamburger);
     }
 
-
-
     getElement(name) {
         let element = document.querySelector(`input[name = "${name}"]:checked`);
         //console.log(element);
-        return  {
+        return {
             name: '${name}',
             price: +element.dataset['price'],
             calories: +element.dataset['calories']
@@ -38,7 +36,7 @@ class Hamburger {
     }
 
     getElements(name) {
-        let  elements= [...document.querySelectorAll(`input[name = "${name}"]:checked`)];
+        let elements = [...document.querySelectorAll(`input[name = "${name}"]:checked`)];
         let list = [];
         elements.forEach(element => {
             list.push({
@@ -48,22 +46,22 @@ class Hamburger {
             })
         });
         //console.log(list.push);
-        return  list;
+        return list;
     }
 
-    countPrise(){
+    countPrise() {
         let count = this.size.price + this.filling.price;
-        this.toppings.forEach(element =>{
-            count +=element.price
+        this.toppings.forEach(element => {
+            count += element.price
         })
         console.log(`Итоговая стоимость: ${count} рублей.`);
         return count;
     }
 
-    countCalories(){
+    countCalories() {
         let count = this.size.calories + this.filling.calories;
-        this.toppings.forEach(element =>{
-            count +=element.calories
+        this.toppings.forEach(element => {
+            count += element.calories
         })
         console.log(`Калорийность: ${count} калорий.`);
         return count;
@@ -71,7 +69,7 @@ class Hamburger {
 
     _total() {
         let elem = document.getElementById('total');
-        if (elem){
+        if (elem) {
             elem.remove();
         }
         document.body.insertAdjacentHTML('beforeend',
