@@ -123,7 +123,7 @@ class Cart {
 
 class CartItem {
 
-    render(product) {
+    render(product, img='https://via.placeholder.com/50x50') {
         return `<div class="cart-item" data-id="${product.id_product}">
                 <div class="product-bio">
                 <img src="${product.img}" alt="Some image">
@@ -141,4 +141,4 @@ class CartItem {
     }
 }
 
-let bask = new cart();
+let bask = new Cart();
