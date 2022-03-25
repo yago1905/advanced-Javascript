@@ -53,6 +53,13 @@ const app = new Vue({
         }
     },
     mounted() {
+        /*
+        Парсим фойл карзины
+        вызываем методы getJson и отправляем в качестве пораметра API(наш внешний сервис)
+        из которого мы берем фаилик cartUrl: '/getBasket.json'
+        Затем в масиве обьекта data в цикле (for) обходим data.contents и 
+        берем каждый товар (item) добовлая ее (this.cartItems) в наш массив cartItems: []
+        */
         this.getJson(`${API + this.cartUrl}`)
             .then(data => {
                 for (let item of data.contents) {
@@ -66,7 +73,7 @@ const app = new Vue({
                     this.filtered.push(item);
                 }
             });
-        this.getJson(`${API + this.catalogUrl}`)
+        this.getJson(`${API + this.catalogUrl}`) //вызываем методы getJson
             .then(data => {
                 for (let item of data) {
                     this.$data.products.push(item);
