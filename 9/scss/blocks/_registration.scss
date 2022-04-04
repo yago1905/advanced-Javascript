@@ -1,0 +1,94 @@
+.registration {
+    display: flex;
+    padding: 64px 0 96px 0;
+  }
+  
+  .registration__input {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .registration__name {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .registration__box {
+    width: 360px;
+    border: 1px solid #a4a4a4;
+    margin: 20px 0 0 0;
+    padding: 13px 20px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #b1b1b1;
+  }
+  
+  .registration__radio {
+    padding: 32px 0 32px 0;
+  }
+  
+  .join-now {
+    background: #f16d7f;
+    border: none;
+    text-transform: uppercase;
+    padding: 16px 66px 16px 30px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  .registration__text {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #b1b1b1;
+    width: 360px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+
+  .registration__loyalty {
+    padding-left: 128px;
+  }
+  
+  .registration__loyalty-list--title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    text-transform: uppercase;
+    padding-bottom: 22px;
+  }
+  
+  .registration__loyalty-list--wrp {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    padding-bottom: 22px;
+  }
+  
+  .loyalty__text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    padding-left: 22px;
+  }
+  
+  .loyalty__list {
+    display: flex;
+    padding-bottom: 16px;
+  }
+  
+  .join-now::after {
+    content: url(../img/stelka.png);
+    height: 100%;
+    position: absolute;
+    left: 120px;
+  }
+  

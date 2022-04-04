@@ -1,0 +1,84 @@
+.catalog {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+
+    @include tablet {
+        justify-content: space-between;      
+    }
+
+   .catalog__filter {
+        flex-grow: .5;
+    }
+
+    .catalog__sort {
+        display: flex;
+    }
+
+    .catalog__filter-title {
+        background-color: transparent;
+        border-color: transparent;
+        text-transform: uppercase;
+        color: #000;
+        @include font (14px, 17px, 600);
+    }
+
+      .btn-secondary {
+        color: #6F6E6E;
+        background-color: transparent;
+        border-color: transparent;
+        text-transform: uppercase;
+        @include font (17px, 14px);
+  
+        @include mobile {
+          @include font (10px, 12px);
+        }
+      }
+
+      .btn-secondary:hover {
+        color: #6F6E6E;
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      .btn-check:focus + .btn-secondary, .btn-secondary:focus {
+        color: #6F6E6E;
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: transparent;
+      }
+
+      .btn-check:checked + .btn-secondary, .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active, .show > .btn-secondary.dropdown-toggle {
+        color: #6F6E6E;
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      .btn-check:checked + .btn-secondary:focus, .btn-check:active + .btn-secondary:focus, .btn-secondary:active:focus, .btn-secondary.active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+        box-shadow: transparent;
+      }
+
+      .btn-secondary:disabled, .btn-secondary.disabled {
+        color: #6F6E6E;
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      .btn-check:focus + .btn, .btn:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+
+      .dropdown-checkbox {
+        text-transform: uppercase;
+        color: #6F6E6E;
+        @include font (14px, 16px);
+        margin: 10px;
+    }
+    
+    .dropdown-menu--box {
+        min-width: 80px;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+          
+}

@@ -1,0 +1,41 @@
+.header {
+    background: $black;
+
+    &__logo {
+      margin: 0 41px 0 0;
+    }
+    
+    &__button {
+      background-color: transparent;
+      border: 0;
+    }
+    
+    &__icon {
+      fill: white;
+    }
+    
+    &__button:active {
+      opacity: 0.5;
+    }
+    
+    &__link {
+      margin: 0 0 0 33px;
+    }
+    
+    &__link:active {
+      opacity: 0.5;
+    }
+    
+    &__wrp {
+      display: flex;
+      justify-content: space-between;
+      min-height: 75px;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    .header__link {
+      display: none;
+    }
+  }

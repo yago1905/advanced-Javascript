@@ -1,0 +1,47 @@
+.overlay {
+    width: 100%;
+    min-height: 420px;
+    background: rgba(58, 56, 56, 0.86);
+    position: absolute;
+    top: 0;
+  }
+  
+  .overlay__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    width: 138px;
+    height: 43px;
+    background: none;
+    text-transform: capitalize;
+  }
+  
+  .overlay,
+  .overlay__button {
+    display: none;
+  }
+  
+  .products__item:hover .overlay__button,
+  .products__item:hover .overlay,
+  .products__item:hover .cart-wrapper-overlay:before {
+    display: block;
+  }
+  
+  .icons-social {
+    width: 20px;
+    height: 20px;
+    fill: black;
+    padding: 8px 12px;
+    background-color: white;
+  }
+  
+  .icons-social:hover {
+    fill: white;
+  
+    background: #f16d7f;
+  }
