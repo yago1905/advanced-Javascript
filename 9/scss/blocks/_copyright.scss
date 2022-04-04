@@ -1,0 +1,27 @@
+.copyright {
+    background: $black;
+    height: 79px;
+    display: flex;
+
+    @include mobile {
+     height: 143px;
+    }
+  }
+  
+  .copyright__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+    }
+  }
+  
+  .copyright__footer-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #fbfbfb;
+  }

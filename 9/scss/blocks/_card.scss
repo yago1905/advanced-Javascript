@@ -1,0 +1,122 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    height: 600px;
+    top: -40px;
+  
+    .card__cotegory {
+      color: #F16D7F;
+      @include font (14px, 17px, 300);
+      text-transform: uppercase;
+      position: relative;
+      width: 146px;
+      margin-bottom: 12px;
+      margin-top: 64px;
+    }
+  
+    .card__cotegory::after {
+      content: "";
+      width: 63px;
+      height: 3px;
+      background: #f16d7f;
+      position: absolute;
+      left: 25%;
+      top: 12px;
+      margin-top: 12px;
+    }
+  
+    .card__title {
+      color: #4D4D4D;
+      @include font (18px, 22px, 300);
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+  
+    .card__content {
+      max-width: 555px;
+      text-align: center;
+      color: #5E5E5E;
+      @include font (14px, 17px, 300);
+    }
+  
+    .card__price {
+      @include font (24px, 29px, 300);
+      color: #EF5B70;
+    }
+  
+    .card--line {
+      max-width: 641px;
+      color: #f16d7f;
+    }
+  
+    .card__dropdown {
+      display: flex;
+    }
+  
+    .btn-secondary {
+      color: #6F6E6E;
+      background-color: transparent;
+      border-color: transparent;
+      text-transform: uppercase;
+      @include font (17px, 14px)
+
+      @include mobile {
+        @include font (10px, 12px)
+      }
+    }
+  
+    .btn-secondary:hover {
+      color: #6F6E6E;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  
+    .btn-check:focus+.btn-secondary,
+    .btn-secondary:focus {
+      color: #6F6E6E;
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+    }
+  
+    .card__button {
+      display: block;
+      margin: 0 auto;
+      margin-top: 48px;
+      margin-bottom: 65px;
+      color: $pink-text;
+      background: none;
+      border: 1px solid $pink-text;
+      width: 211px;
+      height: 47px;
+      font-size: 16px;
+      line-height: 19px;
+      padding: 14px 0;
+      position: relative;
+      text-transform: uppercase;
+    }
+  
+    .card__button:hover,
+    .card__button:focus {
+      cursor: pointer;
+      border: 1px solid #FF6A6A;
+    }
+  
+    .card__button:active {
+      cursor: pointer;
+      background: #FF6A6A;
+    }
+  
+    .card__button::before {
+      position: absolute;
+      content: '';
+      background-image: url(/img/bag.png);
+      width: 26px;
+      height: 24px;
+      top: 12px;
+      left: 23px;
+    } 
+  }

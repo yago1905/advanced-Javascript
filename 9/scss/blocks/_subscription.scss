@@ -1,0 +1,113 @@
+.subscription {
+    display: flex;
+    background-image: url(../img/subscribe.png);
+    min-height: 448px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f2f2f2;
+
+    @include tablet {
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  
+  .subscription__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include tablet {
+      flex-direction: column;
+      padding: 53px 0 140px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      padding: 53px 0 109px;
+    }
+  }
+  
+  .subscription__footer-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    gap: 30px;
+  }
+  
+  .subscription__footer-form {
+    @include flex-center-column();
+    justify-content: center;
+  }
+  
+  .subscription__footer-feedback {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    font-style: italic;
+    color: #222224;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      width: 360px;
+      @include font(18px, 22px);
+      margin-bottom: 25px;
+    }
+  }
+  
+  .subscription__footer-title {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: $black;
+    text-transform: uppercase;
+
+    @include mobile {
+      @include font(24px, 37px, bold);
+    }
+  }
+  
+  .subscription__footer-text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .subscription__footer-form--box {
+    display: flex;
+
+    @include mobile {
+      width: 250px;
+      justify-content: space-around;
+    }
+  }
+  
+  .subscription__footer--mail {
+    width: 256px;
+    height: 50px;
+    padding-left: 22px;
+    background: #e1e1e1;
+    border-radius: 30px 0 0 30px;
+    border: none;
+  }
+  
+  .subscription__footer--submit {
+    background: #f16d7f;
+    border-radius: 0px 30px 30px 0px;
+    border: none;
+    padding: 9px 9px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    width: 100px;
+  }
+  

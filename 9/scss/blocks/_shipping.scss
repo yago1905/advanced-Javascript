@@ -1,0 +1,172 @@
+.shipping {
+    display: flex;
+    flex-direction: column;
+    padding-top: 115px;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 0;
+        padding-bottom: 130px;
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shipping__city {
+        color: #222222;
+        @include font (16px, 19px);
+        text-transform: uppercase;
+    }
+
+    .shipping__box {
+        width: 360px;
+        border: 1px solid #A4A4A4;
+        margin: 20px 0;
+        padding: 17px;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .visually-hidden {
+        color: #222222;
+        @include font (13px, 16px, 300);
+    }
+
+    .shipping__submit {
+        padding: 10px 15px;
+        border: 1px solid #A4A4A4;
+        border-radius: 0px;
+        transition: all 0.2s ease-in;
+        position: relative;
+        overflow: hidden;
+        @include font (11px, 13px, 300);
+        color: #4A4A4A;
+        text-transform: uppercase;
+        z-index: 1;
+        background: #FFFFFF;
+
+
+        /*background: #FFFFFF;
+        padding: 10px 15px;
+        @include font (11px, 13px, 300);
+        text-transform: uppercase;
+        color: #4A4A4A;
+        border: 1px solid #A4A4A4;*/
+    }
+
+    .shipping__submit:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scaleY(1) scaleX(1.25);
+        top: 100%;
+        width: 140%;
+        height: 180%;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: -1;
+    }
+
+    .shipping__submit:after {
+        content: "";
+        position: absolute;
+        left: 55%;
+        transform: translateX(-50%) scaleY(1) scaleX(1.45);
+        top: 180%;
+        width: 160%;
+        height: 190%;
+        background-color: #F16D7F;
+        border-radius: 50%;
+        display: block;
+        transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+        z-index: -1;
+    }
+       
+    .shipping__submit:hover {
+        color: #ffffff;
+        border: 1px solid #F16D7F;
+    }
+       
+    .shipping__submit:hover:before {
+        top: -35%;
+        background-color: #F16D7F;
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+       
+    .shipping__submit:hover:after {
+        top: -45%;
+        background-color: #F16D7F;
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+
+    .shipping__total {
+        margin-top: 57px;
+        display: flex;
+        width: 360px;
+        height: 216px;
+        background: #F5F3F3;
+        list-style: none;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .shipping__total--sub-total {
+        width: 108px;
+        display: flex;
+        padding-top: 35px;
+        padding-right: 35px;
+        padding-bottom: 12px;
+        color: #4A4A4A;
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 400;
+        font-style: normal;
+        text-transform: uppercase;
+        justify-content: space-around;     
+    }
+
+    .shipping__total--grand-total {
+        width: 170px;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 35px;
+        color: #222222;
+        @include font (16px, 19px, 300);
+        text-transform: uppercase;
+    }
+
+    .checkout {
+        width: 273px;
+        height: 50px;
+        @include font (16px, 19px, 300);
+        color: #FFFFFF;
+        background: #F16D7F;
+        text-transform: uppercase;
+        border: none;
+    }
+
+    .checkout:hover {
+        opacity: .5;
+    }
+
+    .shipping__hr {
+        width: 75%;
+        height: 1px;
+        background: #E2E2E2;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: none;
+    }
+
+    .shipping__checkout {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
